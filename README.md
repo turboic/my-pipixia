@@ -166,6 +166,8 @@ To run tests with spark event logging enabled, define the Spark event log direct
 ```
 mvn -Punit-tests test -DSPARK_EVLOG_DIR=/path/for/spark/event/log
 
+clean install -DskipTests -Dspark3.4.1 -Dflink1.17 -Dscala-2.12 -Dhadoop.version=3.3.6 -Pflink-bundle-shade-hive3 -T 4 -Denforcer.skip -Dsparkbundle.version=3.4
+
 mvn clean install -DskipTests -Dspark3.4.1 -Dflink1.17 -Dscala-2.12 -Dhadoop.version=3.3.6 -Pflink-bundle-shade-hive3 -T 4 -Denforcer.skip -Dsparkbundle.version=3.4
 ```
 
