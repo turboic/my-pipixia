@@ -165,6 +165,8 @@ mvn -Pintegration-tests verify
 To run tests with spark event logging enabled, define the Spark event log directory. This allows visualizing test DAG and stages using Spark History Server UI.
 ```
 mvn -Punit-tests test -DSPARK_EVLOG_DIR=/path/for/spark/event/log
+
+mvn clean install -DskipTests -Dspark3.4.1 -Dflink1.17 -Dscala-2.12 -Dhadoop.version=3.3.6 -Pflink-bundle-shade-hive3 -T 4 -Denforcer.skip -Dsparkbundle.version=3.4
 ```
 
 ## Quickstart
